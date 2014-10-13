@@ -47,4 +47,21 @@
     XCTAssert(valid, @"Container both contain firstName & last_name");
 }
 
+- (void)testWordContainerContents
+{
+    NSString *testString = @"firstName last_name, last_name";
+    NSArray *words = [testString hyp_words];
+    BOOL valid = YES;
+
+    if (![words.firstObject isEqualToString:@"firstName"]) {
+        valid = NO;
+    }
+
+    if (![words[1] isEqualToString:@"last_name"] || ![words.lastObject isEqualToString:@"last_name"]) {
+        valid = NO;
+    }
+
+    XCTAssert(valid, @"Container contain all three words in testString");
+}
+
 @end
