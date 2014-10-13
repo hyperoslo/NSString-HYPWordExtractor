@@ -28,13 +28,12 @@ NSArray *words = [string hyp_words];
 Would produce
 
 ```
-words: {(
+words: (
     "first_name",
     "last_name",
     "last_name"
-)}
+)
 ```
-
 
 ## Contributing
 
