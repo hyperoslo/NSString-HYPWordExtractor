@@ -50,4 +50,4 @@ and if you're using this library we probably want to hire you.
 
 ## License
 
-NSString-HYPWordExtractor is available under the MIT license. See the [LICENSE](https://github.com/hyperoslo/NSString-HYPWordExtractor/raw/develop/LICENSE.md) file for more info.
+NSString-HYPWordExtractor is available under the MIT license. See the [LICENSE](https://raw.githubusercontent.com/hyperoslo/NSString-HYPWordExtractor/master/LICENSE.md) file for more info.
