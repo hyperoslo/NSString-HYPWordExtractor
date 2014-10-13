@@ -16,11 +16,18 @@
 
 @implementation NSString_HYPWordExtractorTests
 
-- (void)testWordCount {
-    NSString *testString = @"first_name last_name";
-    NSSet *words = [testString uniqueWords];
+- (void)testUniqueWordCount {
+    NSString *testString = @"firstName last_name";
+    NSSet *words = [testString hyp_uniqueWords];
 
     XCTAssert(words.count == 2, @"Two words was found");
+}
+
+- (void)testWordCount {
+    NSString *testString = @"firstName last_name, last_name";
+    NSArray *words = [testString hyp_words];
+
+    XCTAssert(words.count == 3, @"Two words was found");
 }
 
 @end

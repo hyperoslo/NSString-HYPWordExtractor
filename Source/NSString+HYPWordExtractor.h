@@ -10,6 +10,7 @@
 
 @interface NSString (HYPWordExtractor)
 
-- (NSSet *)uniqueWords;
+- (NSArray *)hyp_words;
+- (NSSet *)hyp_uniqueWords;
 
 @end

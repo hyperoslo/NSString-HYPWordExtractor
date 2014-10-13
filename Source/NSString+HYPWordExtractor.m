@@ -10,11 +10,35 @@
 
 @implementation NSString (HYPWordExtractor)
 
-- (NSSet *)uniqueWords
+- (NSArray *)hyp_words
 {
-    NSMutableSet *set = [NSMutableSet new];
+    return [self hyp_parseWords:[NSMutableArray new]];
+}
 
-    return [set copy];
+- (NSSet *)hyp_uniqueWords
+{
+    return [self hyp_parseWords:[NSMutableSet new]];
+}
+
+#pragma mark - Private methods
+
+- (id)hyp_parseWords:(id)container
+{
+    NSCharacterSet *validSet = [NSCharacterSet characterSetWithCharactersInString:@"0123456789ABCDEFGHIJKOLMNOPQRSTUVWXYZÅÄÆÖØabcdefghijkolmnopqrstuvwxyzåäæöø_"];
+    NSScanner *scanner = [NSScanner scannerWithString:self];
+    [scanner setScanLocation:0];
+
+    NSString *word;
+    while (!scanner.isAtEnd) {
+        if ([scanner scanCharactersFromSet:validSet intoString:&word]) {
+            [container addObject:word];
+        }
+
+        if (scanner.scanLocation < self.length)
+            scanner.scanLocation++;
+    }
+
+    return [container copy];
 }
 
 @end
