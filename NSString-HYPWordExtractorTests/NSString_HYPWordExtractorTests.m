@@ -30,4 +30,21 @@
     XCTAssert(words.count == 3, @"Two words was found");
 }
 
+- (void)testUniqueWordContainerContents
+{
+    NSString *testString = @"firstName last_name";
+    NSSet *words = [testString hyp_uniqueWords];
+    BOOL valid = YES;
+
+    if (![words containsObject:@"firstName"]) {
+        valid = NO;
+    }
+
+    if (![words containsObject:@"last_name"]) {
+        valid = NO;
+    }
+
+    XCTAssert(valid, @"Container both contain firstName & last_name");
+}
+
 @end
