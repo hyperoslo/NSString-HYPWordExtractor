@@ -10,6 +10,7 @@
 		BD46B0D719EC378C0089B713 /* NSString_HYPWordExtractorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD46B0D619EC378C0089B713 /* NSString_HYPWordExtractorTests.m */; };
 		BD46B0DE19EC37AD0089B713 /* NSString+HYPWordExtractor.m in Sources */ = {isa = PBXBuildFile; fileRef = BD46B0DD19EC37AD0089B713 /* NSString+HYPWordExtractor.m */; };
 		BD46B0E119EC4AE40089B713 /* NSString-HYPWordExtractor.podspec in Resources */ = {isa = PBXBuildFile; fileRef = BD46B0E019EC4AE40089B713 /* NSString-HYPWordExtractor.podspec */; };
+		BD46B0E319EC4BF60089B713 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = BD46B0E219EC4BF60089B713 /* .travis.yml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		BD46B0DD19EC37AD0089B713 /* NSString+HYPWordExtractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HYPWordExtractor.m"; sourceTree = "<group>"; };
 		BD46B0DF19EC498C0089B713 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BD46B0E019EC4AE40089B713 /* NSString-HYPWordExtractor.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "NSString-HYPWordExtractor.podspec"; sourceTree = "<group>"; };
+		BD46B0E219EC4BF60089B713 /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +38,7 @@
 		BD46B0C619EC37360089B713 = {
 			isa = PBXGroup;
 			children = (
+				BD46B0E219EC4BF60089B713 /* .travis.yml */,
 				BD46B0DF19EC498C0089B713 /* README.md */,
 				BD46B0E019EC4AE40089B713 /* NSString-HYPWordExtractor.podspec */,
 				BD46B0DB19EC37970089B713 /* Source */,
@@ -133,6 +136,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD46B0E319EC4BF60089B713 /* .travis.yml in Resources */,
 				BD46B0E119EC4AE40089B713 /* NSString-HYPWordExtractor.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

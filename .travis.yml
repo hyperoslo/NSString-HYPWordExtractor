@@ -1,0 +1,3 @@
+language: objective-c
+xcode_project: NSString-HYPWordExtractor.xcodeproj
+xcode_scheme: NSString-HYPWordExtractorTests
