@@ -2,7 +2,7 @@
 
 [![Build Status](https://img.shields.io/travis/hyperoslo/NSString-HYPWordExtractor.svg?style=flat)](https://travis-ci.org/hyperoslo/NSString-HYPWordExtractor)
 
-A super easy way of exracting all or only unique words from an NSString
+A super easy way of extracting all or only unique words from an NSString
 
 ``` objc
 NSString *string = @"first_name last_name";
