@@ -26,9 +26,8 @@
 {
     NSCharacterSet *validSet = [NSCharacterSet characterSetWithCharactersInString:@"0123456789ABCDEFGHIJKOLMNOPQRSTUVWXYZÅÄÆÖØabcdefghijkolmnopqrstuvwxyzåäæöø_"];
     NSScanner *scanner = [NSScanner scannerWithString:self];
-    [scanner setScanLocation:0];
-
     NSString *word;
+    
     while (!scanner.isAtEnd) {
         if ([scanner scanCharactersFromSet:validSet intoString:&word]) {
             [container addObject:word];
