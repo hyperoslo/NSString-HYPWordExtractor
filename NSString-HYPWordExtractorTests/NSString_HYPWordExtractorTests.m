@@ -30,6 +30,14 @@
     XCTAssert(words.count == 3, @"Two words was found");
 }
 
+- (void)testVariableCount
+{
+    NSString *testString = @"(hours_per_week / 37.5) * 100";
+    NSArray *words = [testString hyp_variables];
+
+    XCTAssert(words.count == 1, @"Should only include 1 variable");
+}
+
 - (void)testUniqueWordContainerContents
 {
     NSString *testString = @"firstName last_name";
