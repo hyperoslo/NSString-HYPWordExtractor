@@ -13,6 +13,7 @@
 - (NSArray *)hyp_words
 {
     NSCharacterSet *set = [NSCharacterSet characterSetWithCharactersInString:@"0123456789ABCDEFGHIJKOLMNOPQRSTUVWXYZÅÄÆÖØabcdefghijkolmnopqrstuvwxyzåäæöø_"];
+
     return [self hyp_parseWords:[NSMutableArray new] withCharacterSet:set];
 }
 
@@ -26,12 +27,14 @@
 - (NSArray *)hyp_variables
 {
     NSCharacterSet *set = [NSCharacterSet characterSetWithCharactersInString:@"ABCDEFGHIJKOLMNOPQRSTUVWXYZÅÄÆÖØabcdefghijkolmnopqrstuvwxyzåäæöø_"];
+
     return [self hyp_parseWords:[NSMutableArray new] withCharacterSet:set];
 }
 
 - (NSSet *)hyp_uniqueVariables
 {
     NSCharacterSet *set = [NSCharacterSet characterSetWithCharactersInString:@"ABCDEFGHIJKOLMNOPQRSTUVWXYZÅÄÆÖØabcdefghijkolmnopqrstuvwxyzåäæöø_"];
+
     return [self hyp_parseWords:[NSMutableSet new] withCharacterSet:set];
 }
 
