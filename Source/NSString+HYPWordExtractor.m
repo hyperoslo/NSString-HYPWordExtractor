@@ -49,4 +49,17 @@
     return [container copy];
 }
 
+- (NSArray *)cleanupNumericVariables:(NSArray *)array {
+    NSCharacterSet *characterSet = [NSCharacterSet characterSetWithCharactersInString:@"0123456789."];
+    NSMutableArray *mutableArray = [NSMutableArray arrayWithObjects:array, nil];
+
+    for (NSString *variable in array) {
+        if ([[variable stringByTrimmingCharactersInSet:characterSet] isEqualToString:@""]) {
+            [mutableArray removeObject:variable];
+        }
+    }
+
+    return [mutableArray copy];
+}
+
 @end
