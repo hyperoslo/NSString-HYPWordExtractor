@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = "NSString-HYPWordExtractor"
-  s.version = "1.1"
+  s.version = "1.2"
   s.summary = "A super easy way of extracting all or only unique words from an NSString"
   s.description = <<-DESC
                    * A super easy way of extracting all or only unique words from an NSString
