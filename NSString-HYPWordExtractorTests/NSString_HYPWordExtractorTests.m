@@ -77,6 +77,8 @@
     NSArray *variables = [testString hyp_variables];
 
     XCTAssertTrue(variables.count == 2);
+    XCTAssertTrue([variables containsObject:@"ticket[0].price"]);
+    XCTAssertTrue([variables containsObject:@"ticket[0].quantity"]);
 }
 
 @end
