@@ -18,16 +18,22 @@
 
 - (NSArray *)hyp_variables
 {
-    NSCharacterSet *set = [NSCharacterSet characterSetWithCharactersInString:@"ABCDEFGHIJKOLMNOPQRSTUVWXYZÅÄÆÖØabcdefghijkolmnopqrstuvwxyzåäæöø_"];
+    NSCharacterSet *characterSet = [NSCharacterSet characterSetWithCharactersInString:@"ABCDEFGHIJKOLMNOPQRSTUVWXYZÅÄÆÖØabcdefghijkolmnopqrstuvwxyzåäæöø_[.]0123456789"];
 
-    return [self hyp_parseWords:[NSMutableArray new] withCharacterSet:set];
+    return [self cleanupNumericVariables:[self hyp_parseWords:[NSMutableArray new]
+                                             withCharacterSet:characterSet]];
 }
 
 - (NSSet *)hyp_uniqueVariables
 {
-    NSCharacterSet *set = [NSCharacterSet characterSetWithCharactersInString:@"ABCDEFGHIJKOLMNOPQRSTUVWXYZÅÄÆÖØabcdefghijkolmnopqrstuvwxyzåäæöø_"];
+    NSCharacterSet *characterSet = [NSCharacterSet characterSetWithCharactersInString:@"ABCDEFGHIJKOLMNOPQRSTUVWXYZÅÄÆÖØabcdefghijkolmnopqrstuvwxyzåäæöø_[.]0123456789"];
 
-    return [self hyp_parseWords:[NSMutableSet new] withCharacterSet:set];
+    NSMutableSet *mutableSet = [NSMutableSet new];
+
+    [mutableSet addObjectsFromArray:[self cleanupNumericVariables:[self hyp_parseWords:[NSMutableSet new]
+                                                               withCharacterSet:characterSet]]];
+
+    return [mutableSet copy];
 }
 
 #pragma mark - Private methods
