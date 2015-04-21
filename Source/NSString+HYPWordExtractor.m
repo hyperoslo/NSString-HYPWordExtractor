@@ -57,11 +57,11 @@ static NSString *const HYPVariableCharacterSet = @"ABCDEFGHIJKOLMNOPQRSTUVWXYZÅ
 }
 
 - (NSArray *)cleanupNumericVariables:(NSArray *)array {
-    NSCharacterSet *characterSet = [NSCharacterSet characterSetWithCharactersInString:@"0123456789."];
-    NSMutableArray *mutableArray = [NSMutableArray arrayWithObjects:array, nil];
+    NSCharacterSet *numericSet = [NSCharacterSet characterSetWithCharactersInString:@"0123456789."];
+    NSMutableArray *mutableArray = [NSMutableArray arrayWithArray:array];
 
     for (NSString *variable in array) {
-        if ([[variable stringByTrimmingCharactersInSet:characterSet] isEqualToString:@""]) {
+        if ([[variable stringByTrimmingCharactersInSet:numericSet] isEqualToString:@""]) {
             [mutableArray removeObject:variable];
         }
     }
