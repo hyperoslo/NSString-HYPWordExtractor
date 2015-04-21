@@ -72,4 +72,11 @@
     XCTAssert(valid, @"Container contain all three words in testString");
 }
 
+- (void)testFlatRelationshipVariables {
+    NSString *testString = @"ticket[0].price * ticket[0].quantity + 10";
+    NSArray *variables = [testString hyp_variables];
+
+    XCTAssertTrue(variables.count == 2);
+}
+
 @end
