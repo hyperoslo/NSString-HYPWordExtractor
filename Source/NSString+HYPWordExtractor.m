@@ -1,6 +1,6 @@
 #import "NSString+HYPWordExtractor.h"
 
-static NSString *const HYPWordCharacterSet = @"ABCDEFGHIJKOLMNOPQRSTUVWXYZÅÄÆÖØabcdefghijkolmnopqrstuvwxyzåäæöø_[.]0123456789";
+static NSString *const HYPWordCharacterSet = @"0123456789ABCDEFGHIJKOLMNOPQRSTUVWXYZÅÄÆÖØabcdefghijkolmnopqrstuvwxyzåäæöø_";
 static NSString *const HYPVariableCharacterSet = @"ABCDEFGHIJKOLMNOPQRSTUVWXYZÅÄÆÖØabcdefghijkolmnopqrstuvwxyzåäæöø_[.]0123456789";
 
 @implementation NSString (HYPWordExtractor)
